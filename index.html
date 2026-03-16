@@ -1,0 +1,273 @@
+<h3>Escute a música para ver o seu presente :)<h3>
+
+    
+<!DOCTYPE html>
+<html lang="pt-br">
+    <audio controls>
+        <source src= "C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\Avicii - Hey Brother - AviciiOfficialVEVO (youtube).mp3" type="audio/mp3">;
+    </audio>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Minha Irmã</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #c4a4e9, #63388b);
+            font-family: 'Arial', sans-serif;
+            margin: 5;
+            text-align: center;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        .card {
+            font-size: 120px;
+            cursor: pointer;
+            transition: transform 2s, opacity 2s;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        .card.open {
+            transform: scale(3) rotateY(180deg);
+            opacity: 0;
+            transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+        }
+        .message {
+            display: none;
+            max-width: 400px;
+            
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(112, 112, 112);
+            animation: fadeIn 1s ease-in-out;
+            color: rgb(255, 255, 255);
+        }
+        .message.show {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        button {
+            background: #a3648e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #a3648e;
+        }
+        .gallery {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }   
+        .gallery.show {
+            display: block;
+        }
+        .gallery img {
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.096);
+        }
+        .flash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s;
+        }
+        .flash.active {
+            opacity: 1;
+        }
+        .photo-icon {
+            font-size: 120px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .photo-icon.open {
+            transform: scale(1.2);
+        }
+        .flower-icon {
+            font-size: 120px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .flower-icon:hover {
+            transform: scale(1.1);
+        }
+        .flower-gallery {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .flower-gallery.show {
+            display: block;
+        }
+        .heart-icon {
+            font-size: 120px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .heart-icon:hover {
+            transform: scale(1.1);
+        }
+        .heart-message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(112, 112, 112);
+            animation: fadeIn 1s ease-in-out;
+            color: rgb(255, 255, 255);
+            max-width: 400px;
+        }
+        .heart-message.show {
+            display: block;
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 40px 0;
+        }
+        h2 {
+            margin-top: 0;
+            color: #a3648e;
+        }
+        p { 
+            margin: 10px 0; 
+            line-height: 1.5;
+            font-size: 20;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="card" onclick="openCard()">💌</div>
+        <div class="message">
+            <h2>FELIZ NOVA FASE, CRIATURA<3!</h2>
+        </p>Espero que você não pensou que eu esqueceria de você, nessa sua nova fase, né?
+        você é muito importante, não poderia deixar isso passar, queria te parabeniar por mais um ciclo completo.<p>
+
+            </p1>Espero que você tenha se divertido muito nesses dias, e que goste do que eu preperai somente para você,
+            e que abre um sorriso sincero ou chore de emoção, enfim, enquanto você lê isso, eu gostaria muito para lhe 
+            e dizer o quanto eu lhe amo, mas não disso, mas saiba que mesmo não sabendo expressar, você faz falta,
+            quero lhe pedir desculpas por todasas coisas e ferimentos que eu te causei ao longo dos anos, saiba, que me 
+            arrependo de cada uma, infelizmente, não sou capaz de voltar no passado, enfim, sou grato de verdade por ter você,
+            saiba que se você precisar de mim, estarei aqui, não importa o momento, apenas me chame que irei ate você, 
+            independente de que seja.</p1>
+        
+            <div under="closeCard">
+            </div>
+            <button onclick="closeCard()">Fechar a Carta</button>
+        </div>
+    </div>
+    <div class="section">
+        <div class="flower-icon" onclick="showFlowerGallery()">🌻</div>
+        <div class="flower-gallery">
+            <h3>Aqui onde começou o seu jardim, onde passamos por muita história, mas continuamos juntos.</h3>
+            <img src="C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\foto 1.jpg" alt="Flor 1">
+            <p>Era tão pequena e inocente, mas começava a viver na inocência como qualquer flor a desabrochar... </p>
+            <img src="C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\foto 2.jpg" alt="Flor 2">
+            <p>O rostinho da pura inocência, como ela se sentiria ou entender o que você se tornou? orgulhosa?<p>
+            <p>Não sei, ela não sabe o que é isso, mas seria esse o seu sentimento?</p>
+            <img src="C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\foto 3.jpg" alt="Flor 3">
+            <p>Ao completar 8 anos, ainda era inocente, e entendia como a vida funcionava.</p>
+            <img src="C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\foto 4.jpg" alt="Flor 4">
+            <p>A carinha que eu não assumia que defenderia a qualquer custo da minha vida, mas faria tudo de novo para te proteger de qualquer briga</p>
+            <!-- Adicione mais flores aqui -->
+        </div>
+    </div>
+    <div class="section">
+        <div class="photo-icon" onclick="showGallery()">📷</div>
+        <div class="gallery">
+            <h3>Memórias Especiais</h3>
+            <h3>Aqui estão umas das fotinhas tirando durente esses tempos</h3>
+            <img src="C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\foto 5.jpg" alt="Foto 1">
+            <p>E aqui eu vejo um sorriso encantador mostrando o quanto você sabe viver</p>
+            <img src="C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\foto 6.jpg" alt="Foto 2">
+            <p>Um sorriso mais majestoso e belo, mostrando a sua beleza por onde passou</p>
+            <img src= "C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\foto 7.jpg" alt="Foto 3">
+            <p>Uma moça já madura, com sorriso radiante e mostrando um pouco de si</p>
+            <img src="C:\Users\allan\Documents\VSCode trabalhos\Carta Ellen\FOTOS ELLEN\foto 9.jpg" alt="Foto 4">
+            <p>E a melhor, a minha companheiro desde de sempre, desde da minha versão pequena,</p>
+            <p>é os dias de hoje, e para sempre.</p>
+            <!-- Adicione mais fotos aqui -->
+        </div>
+    </div>
+    <div class="section">
+        <div class="heart-icon" onclick="showHeartMessage()">❤️</div>
+        <p>especial</p>
+        <div class="heart-message">
+            <h2>Mensagem Especial</h2>
+            <p>Oi Ellen, que bom saber que vc teve esse momento com Deus, único e especial! Espero que vc tenha aproveitado esse tempo e que muitas bênçãos venha pra você, e que seja um grande passo na sua vida junto da presença do Senhor.
+Franck e Kamilla.</p>
+        </div>
+    </div>
+    <div class="flash" id="flash"></div>
+    <div class="flash" id="flash"></div>
+    <script>
+        function openCard() {
+            document.querySelector('.message').classList.add('show');
+            document.querySelector('.card').classList.add('open');
+        }
+        function closeCard() {
+            document.querySelector('.message').classList.remove('show');
+            document.querySelector('.card').classList.remove('open');
+            document.querySelector('.gallery').classList.remove('show');
+            document.querySelector('.photo-icon').classList.remove('open');
+        }
+        function showGallery() {
+            const gallery = document.querySelector('.gallery');
+            const photoIcon = document.querySelector('.photo-icon');
+            const flash = document.getElementById('flash');
+            flash.classList.add('active');
+            if (gallery.classList.contains('show')) {
+                gallery.classList.remove('show');
+                photoIcon.classList.remove('open');
+                flash.classList.remove('active');
+                return; 
+            }
+            setTimeout(() => {
+                flash.classList.remove('active');
+                document.querySelector('.gallery').classList.add('show');
+            }, 500);
+        }
+        function showFlowerGallery() {
+            const gallery = document.querySelector('.flower-gallery');
+            gallery.classList.toggle('show');
+        }
+        function showHeartMessage() {
+            const message = document.querySelector('.heart-message');
+            message.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
